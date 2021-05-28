@@ -1,11 +1,23 @@
-import React from "react";
-
+import React, { Fragment } from 'react'
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-
 import "index.scss";
-
 import Button from "components/Button";
+import DayListItem from "components/DayListItem";
+import DayList from "components/DayList";
+import InterviewerListItem from "components/InterviewerListItem";
+import InterviewerList from "components/InterviewerList";
+// import Appointment from "components/Appointment/index";
+// import Header from "components/Appointment/Header";
+// import Empty from "components/Appointment/Empty";
+// import Show from "components/Appointment/Show";
+// import Confirm from "components/Appointment/Confirm";
+// import Status from "components/Appointment/Status";
+// import Error from "components/Appointment/Error";
+// import Form from "components/Appointment/Form";
+
+
+
 
 storiesOf("Button", module)
   .addParameters({
@@ -22,3 +34,48 @@ storiesOf("Button", module)
       Disabled
     </Button>
   ));
+
+  storiesOf("DayListItem", module) //Initiates Storybook and registers our DayListItem component
+  .addParameters({
+    backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
+  }) // Provides the default background color for our component
+  .add("Unselected", () => <DayListItem name="Monday" spots={5} />) // To define our stories, we call add() once for each of our test states to generate a story
+  .add("Selected", () => <DayListItem name="Monday" spots={5} selected />) 
+  .add("Full", () => <DayListItem name="Monday" spots={0} />)
+  .add("Clickable", () => (
+    <DayListItem name="Tuesday" setDay={action("setDay")} spots={5} /> // action() allows us to create a callback that appears in the actions panel when clicked
+  ));
+
+  const interviewer = {
+    id: 1,
+    name: "Sylvia Palmer",
+    avatar: "https://i.imgur.com/LpaY82x.png"
+  };
+  
+  storiesOf("InterviewerListItem", module)
+    .addParameters({
+      backgrounds: [{ name: "dark", value: "#222f3e", default: true }]
+    })
+    .add("Unselected", () => (
+      <InterviewerListItem
+        id={interviewer.id}
+        name={interviewer.name}
+        avatar={interviewer.avatar}
+      />
+    ))
+    .add("Selected", () => (
+      <InterviewerListItem
+        id={interviewer.id}
+        name={interviewer.name}
+        avatar={interviewer.avatar}
+        selected
+      />
+    ))
+    .add("Clickable", () => (
+      <InterviewerListItem
+        id={interviewer.id}
+        name={interviewer.name}
+        avatar={interviewer.avatar}
+        setInterviewer={action("setInterviewer")}
+      />
+    ));
