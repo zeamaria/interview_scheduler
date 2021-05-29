@@ -7,6 +7,12 @@ import Status from "components/Appointment/Status";
 import "components/Appointment/styles.scss";
 
 export default function Appointment(props) {
+
+  function save(name, interviewer) {
+    const interview = {
+      student: name,
+      interviewer,
+    };
   
   return (
     <article className="appointment">
