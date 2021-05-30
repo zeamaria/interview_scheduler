@@ -128,9 +128,11 @@ storiesOf("Button", module)
           onConfirm={action("onConfirm")}
           onCancel={action("onCancel")}
         />)
-      .add("Status", () => 
-        <Status 
-          messsage={"Deleting"}
+        .add("Status Saving", () => (
+          <Status message="Saving"/>
+        ))
+        .add("Status Deleting", () => (
+          <Status message="Deleting"
         />)
       .add("Error", () => 
         <Error
