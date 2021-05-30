@@ -35,12 +35,12 @@ export default function Appointment(props) {
     };
 
     if (interview.student === "") {
-      setError("Please type student name above.")
+      setError("Please type student name above.");
       return;
     }
 
     if (interview.interviewer === null) {
-      setError("Please select an interviewer from the list")
+      setError("Please select an interviewer from the list");
       return;
     }
 
