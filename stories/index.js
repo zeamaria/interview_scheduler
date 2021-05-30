@@ -116,6 +116,7 @@ storiesOf("Button", module)
       .add("Empty", () => <Empty onAdd={action("onAdd")} />)
       .add("Show", () => 
         <Show 
+          name={interviewer.name}
           student={"Lydia Miller-Jones"}
           interviewer={interviewer.id}
           onEdit={action("onEdit")} 
