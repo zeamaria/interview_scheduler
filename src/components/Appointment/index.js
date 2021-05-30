@@ -12,7 +12,7 @@ export default function Appointment(props) {
     const interview = {
       student: name,
       interviewer,
-    };
+    }};
   
   return (
     <article className="appointment">
