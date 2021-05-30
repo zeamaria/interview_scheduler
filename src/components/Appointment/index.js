@@ -13,11 +13,11 @@ export default function Appointment(props) {
       student: name,
       interviewer,
     }};
-  
+    console.log(props.interview)
+    console.log(props.time)
   return (
     <article className="appointment">
       <Header time={props.time}></Header>
-
       {props.interview ? (
         <Show
           student={props.interview.student}
@@ -27,7 +27,9 @@ export default function Appointment(props) {
         <Empty />
       )}
 
-      {/* <Form></Form> */}
+      <Form 
+      interviewers={props.interviewers} 
+      save={save}/>
     </article>
   );
 }
