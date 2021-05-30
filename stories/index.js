@@ -133,7 +133,7 @@ storiesOf("Button", module)
         ))
         .add("Status Deleting", () => (
           <Status message="Deleting"
-        />)
+        />))
       .add("Error", () => 
         <Error
           messsage={"Could not delete appointment."}
