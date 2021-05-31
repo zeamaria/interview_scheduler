@@ -12,7 +12,6 @@ import { useVisualMode } from "hooks/useVisualMode";
 const EMPTY = "EMPTY";
 const SHOW = "SHOW";
 const CREATE = "CREATE";
-const STATUS = "STATUS";
 const CONFIRM = "CONFIRM";
 const EDIT = "EDIT";
 const DELETING = "DELETING";
