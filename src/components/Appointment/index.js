@@ -48,13 +48,17 @@ export default function Appointment(props) {
     setMessage("Saving...");
     transition(SAVING);
 
-    props.bookInterview(props.id, interview).then(() => transition(SHOW));
+    props.bookInterview(props.id, interview)
+    .then(() => transition(SHOW))
+    .catch(() => transition(ERROR_SAVE, true));
   }
 
   function deleteApp() {
     setMessage("Deleting");
-    transition(DELETING);
-    props.cancelInterview(props.id).then(() => transition(EMPTY));
+    transition(DELETING, true);
+    props.cancelInterview(props.id)
+    .then(() => transition(EMPTY))
+    .catch(() => transition(ERROR_DELETE, true));
   }
 
   return (
