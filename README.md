@@ -24,7 +24,7 @@ This project is intended for interviewers to book and keep track of upcoming int
 * react-scripts
 
 ## devDependencies
-*** @babel/core
+* @babel/core
 * @storybook/addon-actions
 * @storybook/addon-backgrounds
 * @storybook/addon-links
@@ -34,4 +34,4 @@ This project is intended for interviewers to book and keep track of upcoming int
 * @testing-library/react
 * babel-loader
 * node-sass
-* prop-types*** 
+* prop-types
