@@ -1,6 +1,6 @@
 # Interview Scheduler
 
-This project is intended for interviewers to book and keep track of upcoming interviews. This app allows users to book, edit, cancel and delete upcoming interviews, all shown in an easy to use week view UI.
+This web app is intended for interviewers to book and keep track of upcoming interviews. This app allows users to book, edit, cancel and delete upcoming interviews, all shown in an easy to use week view UI.
 
 ## Setup
 1. You will need to [clone the scheduler API!](https://github.com/zeamaria/scheduler-api).
