@@ -7,7 +7,7 @@ import Confirm from "components/Appointment/Confirm";
 import Status from "components/Appointment/Status";
 import Error from "components/Appointment/Error";
 import "components/Appointment/styles.scss";
-import { useVisualMode } from "hooks_2/useVisualMode";
+import { useVisualMode } from "hooks/useVisualMode";
 
 const EMPTY = "EMPTY";
 const SHOW = "SHOW";
