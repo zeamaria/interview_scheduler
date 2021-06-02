@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 export default function useApplicationData() {
@@ -12,7 +12,8 @@ const [state, setState] = useState({
 
 function updateSpots(status) {
   const daySpots = state.day
-  state.days.map((day) => {
+
+  state.days.forEach((day) => {
     if (day.name === daySpots && status === "book") {
       day.spots = day.spots - 1;
     }
