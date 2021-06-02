@@ -66,8 +66,6 @@ export default function Application(props) {
         <Appointment 
         key="last" 
         time="5pm" 
-        // interviewers={getInterviewersForDay(state, state.day)}
-        // interview={{student: null, interviewer:{}}}
         />
     
       </section>
