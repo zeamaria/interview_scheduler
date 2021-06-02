@@ -20,15 +20,12 @@ function updateSpots(status) {
     else if (day.name === daySpots && status === "cancel") {
       day.spots = day.spots + 1;
     }
+    return null
   })
 }
 
 
  function bookInterview(id, interview) {
-
-  if (!state.appointments[id].interview) {
-    updateSpots("book");
-  }
  
   const appointment = {
     ...state.appointments[id],
@@ -50,6 +47,7 @@ return axios.put(`/api/appointments/${id}`, {interview})
     ...state,
     appointments
   })
+  updateSpots("book");
 })
 
 };
@@ -60,13 +58,15 @@ function cancelInterview(id) {
   };
   updateSpots("cancel");
   appointment[id].interview = null;
+  
   return axios.delete(`/api/appointments/${id}`)
   .then(res => {
     setState({
       ...state,
       appointment
     })
-  })
+  } 
+  )
 }
 
 const setDay = day => setState({ ...state, day });
