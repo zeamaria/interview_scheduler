@@ -3,15 +3,11 @@
 This web app is intended for interviewers to book and keep track of upcoming interviews. This app allows users to book, edit, cancel and delete upcoming interviews, all shown in an easy to use week view UI.
 
 ## Setup
-1. You will need to [clone the scheduler API!](https://github.com/zeamaria/scheduler-api).
-2. Install dependencies with `npm install`.
-3. Copy the .env.example to .env.development and fill in the variables.
-4. Run `src/db/schema` on the development psql server.
-5. Run curl request to `localhost:8001/api/debug/reset` to reset the database.
-6. Start Developer Server for scheduler_api with `npm start`.
-7. Start Webpack Development server for interview_scheduler with `npm start`.
-
-
+1. Install dependencies with `npm install`.
+2. Copy the .env.example to .env.development and fill in the variables.
+3. [Clone the scheduler API!](https://github.com/zeamaria/scheduler-api).
+4. Follow the [README instructions on scheduler-api!](https://github.com/lighthouse-labs/scheduler-api) to get the database running. 
+5. Start Webpack Development server for interview_scheduler with `npm start`.
 
 
 ## Dependencies
