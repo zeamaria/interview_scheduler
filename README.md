@@ -11,7 +11,6 @@ This web app is intended for interviewers to book and keep track of upcoming int
 
 
 ## Dependencies
-* @testing-library/react-hooks
 * axios
 * classnames
 * normalize.css
@@ -28,6 +27,6 @@ This web app is intended for interviewers to book and keep track of upcoming int
 * @storybook/react
 * @testing-library/jest-dom
 * @testing-library/react
+* @testing-library/react-hooks
 * babel-loader
 * node-sass
-* prop-types
